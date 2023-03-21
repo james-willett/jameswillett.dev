@@ -1,3 +1,3 @@
 [build]
-    command = "pip install git+https://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@github.com/squidfunk/mkdocs-material-insiders.git mkdocs-minify-plugin mkdocs-glightbox && mkdocs build"
+    command = "pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git mkdocs-minify-plugin mkdocs-glightbox && mkdocs build"
     publish = "site"
