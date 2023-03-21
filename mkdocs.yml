@@ -17,13 +17,15 @@ theme:
     - search.suggest
     - toc.follow
   palette:
-    - scheme: default
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
       primary: teal
       accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
       primary: teal
       accent: deep orange
       toggle:
