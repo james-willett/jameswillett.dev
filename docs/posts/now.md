@@ -15,9 +15,11 @@ I'm working full-time as a Principal Software Engineer at SAP. I'm also trying t
 
 <!-- more -->
 
+![Willett Family](now/WillettFamily.jpg)
+
 ---
 
-## My Current Projects
+## :construction_worker_tone1: My Current Projects :construction_worker_tone1:
 
 This is what I spend my time doing:
 
@@ -31,18 +33,20 @@ This is what I spend my time doing:
 
 ---
 
-## My Current Priorities
+## :white_check_mark: My Current Priorities :white_check_mark:
 
 On a more global level, these are my **priorities**:
 
-- Spend ample time building and maintaining deep relationships
-- Have time to pursue learning projects and things that interest me
-- Walking 5 miles per day
-- Lifting weights x3 per week
-- Eating a healthy diet
-- Sleep 7 hours a night
-- Delegate the things I don’t want to do/shouldn’t be doing
-- Increase the proportion of my income that comes from my own products
+- Spend ample time building and maintaining deep relationships :speech_left:
+- Have time to pursue learning projects and things that interest me :teacher:
+- Walking 5 miles per day :man_walking:
+- Lifting weights x3 per week :man_lifting_weights:
+- Eating a healthy diet :broccoli:
+- Sleep 7 hours a night :sleeping_accommodation:
+- Delegate the things I don’t want to do/shouldn’t be doing :person_shrugging:
+- Increase the proportion of my income that comes from my own products :money_with_wings:
+
+---
 
 I am open to considering new opportunities, as I highly value novelty, spontaneity, and growth. However, I aspire to stick to my priorities 90% of the time. As a result, I will say no to the majority of requests that come my way now.
 
