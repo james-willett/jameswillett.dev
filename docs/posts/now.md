@@ -7,13 +7,19 @@ categories:
   - Personal Productivity
 ---
 
-# What I'm Doing Now
+# Now
+
+My **"What I'm Doing Now"** declaration page - last updated on **Sunday April 9th, 2023**.
+
+[![Now - Banner Image]](./now.md)
+
+  [Now - Banner Image]: now/Now_Banner.png
+
+<!-- more -->
 
 I’m in a town called Reading, just outside London in the UK. 
 
 I'm working full-time as a Principal Software Engineer at SAP. I'm also trying to lead a balanced yet exciting and stable habit-based life with my wife Sarah and our two children Seb & Chloe.
-
-<!-- more -->
 
 ![Willett Family](now/WillettFamily.jpg)
 
@@ -24,7 +30,7 @@ I'm working full-time as a Principal Software Engineer at SAP. I'm also trying t
 This is what I spend my time doing:
 
 - Being a supportive and present husband, father, son and friend
-- Working mostly remotely in my role as a Principal Software Engineer
+- Working mostly remotely in my role as a Principal Software Engineer at [SAP](https://sap.com)
 - Creating in-depth, artful videos that help others become better software developers
 - Producing online training courses that teach software development concepts and tools
 - Delivering relevant content creation and software development advice through short/medium form content on social media
@@ -54,6 +60,6 @@ If my activities or priorities happen to change, I’ll update this page to refl
 
 This page is a public declaration and a reminder to myself, and it balances out the goal-driven nature of my Impossible List.
 
-It was inspired by [Thomas Frank](https://thomasjfrank.com/)
+It was inspired by [Thomas Frank](https://thomasjfrank.com/) and [Derek Shivers](https://nownownow.com/about)
 
 
