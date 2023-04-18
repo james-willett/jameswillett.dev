@@ -19,7 +19,7 @@ My **"What I'm Doing Now"** declaration page - last updated on **Sunday April 9t
 
 I’m in a town called Reading, just outside London in the UK. 
 
-I'm working full-time as a Principal Software Engineer at SAP. I'm also trying to lead a balanced yet exciting and stable habit-based life with my wife Sarah and our two children Seb & Chloe.
+I'm working full-time as a Principal Software Engineer at [SAP](https://sap.com). I'm also trying to lead a balanced yet exciting and stable habit-based life with my wife Sarah and our two children Seb & Chloe.
 
 ![Willett Family](now/WillettFamily.jpg)
 
