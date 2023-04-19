@@ -52,6 +52,9 @@ plugins:
         target: _blank
 
 extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/james-willett
