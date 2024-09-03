@@ -46,9 +46,7 @@ plugins:
   - minify:
       minify_html: true
   - tags
-  - privacy:
-      external_links_attr_map:
-        target: _blank
+  - privacy
 
 extra:
   analytics:
