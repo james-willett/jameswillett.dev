@@ -1,4 +1,5 @@
-james:
-  name: James Willett
-  description: Developer
-  avatar: https://avatars.githubusercontent.com/u/6908294
+authors:
+  james:
+    name: James Willett
+    description: Developer
+    avatar: https://avatars.githubusercontent.com/u/6908294
