@@ -1,6 +1,8 @@
 site_name: jameswillett.dev
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
   features:
     - content.action.edit
     - content.action.view
@@ -46,15 +48,15 @@ plugins:
   - minify:
       minify_html: true
   - tags
-  - privacy:
-      external_links_attr_map:
-        target: _blank
+  - privacy
 
 extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
+    - icon: simple/youtube
+      link: https://youtube.com/@james-willett
     - icon: fontawesome/brands/github-alt
       link: https://github.com/james-willett
     - icon: fontawesome/brands/twitter
