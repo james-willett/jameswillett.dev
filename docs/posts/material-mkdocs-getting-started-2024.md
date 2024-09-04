@@ -431,12 +431,6 @@ const result = concatenateStrings("Hello, ", "World!");
 console.log("The concatenated string is:", result);
 ```
 
-    **:material-video-box: Recording Type**: Screencast
-
-    **:material-text-box: Description**: Show some examples of how code blocks work
-
-    **:octicons-git-branch-16: Demo Branch**: `6_CodeBlocks`
-
 --- 
 
 ## 11. Content Tabs
