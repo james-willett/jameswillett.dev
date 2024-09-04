@@ -49,7 +49,14 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
     - How to empathize parts of your content using admonitions - also known as callouts
     - And how to bring your ideas to life with statically rendered diagrams directly in your docs
 
-- If that sounds like something you'd be interested in, then breathe in, breathe out, and let’s explore this together 🙂
+- Now you can follow along with me directly in this video, or if you prefer I have a written version of this tutorial available on my [website](https://jameswillett.dev/getting-started-with-material-for-mkdocs-2024-edition/)
+
+??? tip "B-roll ideas"
+
+    Animated screencasts or screenshots this [tutorial](https://jameswillett.dev/getting-started-with-material-for-mkdocs-2024-edition/)
+
+- I'll leave a link to the written tutorial in the description of this video.
+- So if that sounds like something you'd be interested in, then breathe in, breathe out, and let’s explore this together 🙂
 
 ---
 
