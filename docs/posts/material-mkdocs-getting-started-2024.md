@@ -60,6 +60,36 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
 
 ---
 
+## 2. 'MkDocs' vs 'Material for MkDocs'
+
+!!! example "Section Metadata"
+
+    **:material-video-box: Recording Type**: Narration
+
+    **:material-text-box: Description**: Highlight the differences between the Material theme for MkDocs, and the MkDocs tool itself
+
+    **:octicons-git-branch-16: Demo Branch**: `N/A`
+
+- Before we dive into the demo, let's go over the differences between [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), as there is often some confusion.
+
+??? tip "B-roll ideas"
+    - MkDocs logo pops up on my left, Material on my right
+
+
+- Plain **MkDocs** is a static site generator specifically designed for creating documentation websites. It works by converting Markdown files into a fully functional static site. With MkDocs, you get a straightforward setup, using a single YAML configuration file to manage your site.
+
+??? tip "B-roll ideas"
+    - Start with a screen recording showing a simple MkDocs site being generated from Markdown files.
+    - Transition to a split-screen comparison: on one side, show the basic MkDocs site, and on the other, a site using Material for MkDocs with its enhanced design.
+
+- On the other hand, **Material for MkDocs** is a theme built on top of MkDocs. It transforms your documentation site with a modern, responsive design inspired by Material Design principles. Now, what's important to note is that this theme doesn't just change the look; it enhances functionality with built-in plugins that support features like blog posts, social cards, advanced search capabilities and loads more.
+
+- So basically, **MkDocs** provides the core functionality of building a static site, while **Material for MkDocs** signficantly elevates the visual and interactive experience of your documentation.
+
+- Ok, now that's out of the way, let's get to work on setting up our new Material for MkDocs site.
+
+---
+
 ## 2. Prereqs
 
 !!! example "Section Metadata"
@@ -70,7 +100,7 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
 
     **:octicons-git-branch-16: Demo Branch**: `N/A`
 
-- Before we start, let’s go over the prerequistes you’ll need to have installed if you want to follow along with this tutorial
+- Before we begin, let’s go over the prerequistes you’ll need to have installed if you want to follow along with this tutorial
 
 ??? tip "B-roll ideas"
     Mac and Windows logos flash on screen
