@@ -21,7 +21,7 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
 
     This is the script for the 2024 edition of the "Getting Started with Material for MkDocs" YouTube video.<br/><br/>
     **Current Status**: Reviewing Script<br/>
-    **Last Updated**: 04-Sept-2024
+    **Last Updated**: 10-Sept-2024
 
 ## 1. Intro
 
@@ -56,7 +56,9 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
     Animated screencasts or screenshots this [tutorial](https://jameswillett.dev/getting-started-with-material-for-mkdocs-2024-edition/)
 
 - I'll leave a link to the written tutorial in the description of this video.
-- So if that sounds like something you'd be interested in, then breathe in, breathe out, and let’s explore this together 🙂
+- This is going to be a pretty in-depth tutorial. If this is your first time using Material for MkDocs then you're probably best to just follow it all through from the beginning.
+- But if you've used Material for MkDocs before and just want to know about a certain feature, I've left all the timecodes below so you can jump around the video at your leisure.
+- So if this sounds like something you'd be interested in, then breathe in, breathe out, and let’s explore this together 🙂
 
 ---
 
@@ -70,13 +72,13 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
 
     **:octicons-git-branch-16: Demo Branch**: `N/A`
 
-- Before we dive into the demo, let's go over the differences between [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), as there is often some confusion.
+- Before we dive into the demo, let's quickly go over the differences between [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), as there is often some confusion.
 
 ??? tip "B-roll ideas"
     - MkDocs logo pops up on my left, Material on my right
 
 
-- Plain **MkDocs** is a static site generator specifically designed for creating documentation websites. It works by converting Markdown files into a fully functional static site. With MkDocs, you get a straightforward setup, using a single YAML configuration file to manage your site.
+- Plain **MkDocs** is a static site generator specifically designed for creating documentation websites. So by using MkDocs alone, you get a relatively vanilla and straightforward site for your documentation.
 
 ??? tip "B-roll ideas"
     - Start with a screen recording showing a simple MkDocs site being generated from Markdown files.
@@ -86,11 +88,11 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
 
 - So basically, **MkDocs** provides the core functionality of building a static site, while **Material for MkDocs** signficantly elevates the visual and interactive experience of your documentation.
 
-- Ok, now that's out of the way, let's get to work on setting up our new Material for MkDocs site.
+- Ok, now that's out of the way, let's get to work on setting up our new **Material for MkDocs site**.
 
 ---
 
-## 2. Prereqs
+## 3. Prereqs
 
 !!! example "Section Metadata"
 
@@ -100,7 +102,7 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
 
     **:octicons-git-branch-16: Demo Branch**: `N/A`
 
-- Before we begin, let’s go over the prerequistes you’ll need to have installed if you want to follow along with this tutorial
+- Before we jump in, let’s go over the prerequistes you’ll need to have installed if you want to follow along with this tutorial.
 
 ??? tip "B-roll ideas"
     Mac and Windows logos flash on screen
@@ -111,15 +113,15 @@ Script for the getting started with Material for MkDocs tutorial - 2024 edition.
     List of these prereqs appear to left or right of me
 
 - So we’re going to be using the __PYTHON__ version of MkDocs in this tutorial, and you’ll need to have PYTHON 3 installed. I’ll be using version `3.12.4` in this video, so either that or a later version should work fine.
-- We’ll be using the Python package manager called PIP to install the required dependencies… but if you are running Python 3.4 or later then PIP is included anyway by default… otherwise if you’re using an earlier version, you might need to install PIP.
+- We’ll be using the Python package manager called **PIP** to install the required dependencies… but if you're running Python 3.4 or later then PIP is included anyway by default… otherwise if you’re using an earlier version of Python then you might need to install PIP.
 - Now, to follow along with the coding, it’s helpful if you have an IDE installed, and I’ll be using Visual Studio Code in this video.
 - And finally, we’ll be publishing our documentation portal on GITHUB PAGES… so you’ll need to have an account on [GitHub](http://github.com) and ideally have git installed and setup to work from the command line as well.
 
-And that’s all we should need. So let’s jump over to a terminal and get started!
+And that’s all you should need. So let’s jump over to a terminal and get started!
 
 ---
 
-## 3. Initial Installation
+## 4. Initial Installation
 
 !!! example "Section Metadata"
 
@@ -134,10 +136,11 @@ And that’s all we should need. So let’s jump over to a terminal and get star
 - Do `which python3` to show my Python is installed with Homebrew
     - Mention if you are running on Windows you can do **`where python` instead**
 - Virtual environment setup with `python -m venv venv`
-- `source venv/bin/activate` to activate virtual environment
+- `source venv/bin/activate` to activate virtual environment 
+    - (on **Windows**: `.\venv\Scripts\activate`)
 - Check pip version `pip --version`
 - Install mkdocs material - `pip install mkdocs-material`
-- Open Visual studio code in this folder with `vscode .`
+- Open Visual studio code in this folder with `code .`
 - Open a terminal within VS code and create the new site `mkdocs new .`
 - Add basic `mkdocs.yml` configuration:
 
@@ -153,7 +156,7 @@ theme:
 
 ---
 
-## 4. Add Yaml Schema Validation
+## 5. Add Yaml Schema Validation
 
 !!! example "Section Metadata"
 
@@ -187,7 +190,7 @@ theme:
 
 ---
 
-## 5. Adjust Color Scheme
+## 6. Adjust Color Scheme
 
 !!! example "Section Metadata"
 
@@ -232,7 +235,7 @@ theme:
 
 - Now when we hover over the links with the mouse, they turn purple.
 
-- Another cool thing we can easily do in MkDocs is add a toggle to our site that allows the user to switch between light and dark modes. Add this to `palette` in the `mkdocs.yml` file to enable this:
+- Another cool thing we can easily do in Material for MkDocs is add a toggle to our site that allows the user to switch between light and dark modes. Add this to `palette` in the `mkdocs.yml` file to enable this:
 
 ```yaml title="mkdocs.yml"
 theme:
@@ -264,7 +267,7 @@ theme:
 
 ---
 
-## 6. Adjust Font
+## 7. Adjust Font
 
 !!! example "Section Metadata"
 
@@ -305,7 +308,7 @@ theme:
 
 ---
 
-## 7. Reminder to Like and Subscribe 
+## 8. Reminder to Like and Subscribe 
 
 !!! example "Section Metadata"
 
@@ -316,11 +319,12 @@ theme:
     **:octicons-git-branch-16: Demo Branch**: `N/A`
 
 - Before we go on, if you’re finding this video helpful, please hit the like button down below, and subscribe to the channel for more videos just like this.
+- And if you're looking for more guides and tutorials around Material for MkDocs and technical documentation in general, then do checkout my website. I'll leave a link in the description.
 - OK. Let’s carry on setting up our MkDocs Material site!
 
 ---
 
-## 8. Using Emojs
+## 9. Using Emojs
 
 !!! example "Section Metadata"
 
@@ -350,7 +354,7 @@ markdown_extensions:
 
 ---
 
-## 9. Logos and Icons
+## 10. Logos and Icons
 
 !!! example "Section Metadata"
 
@@ -400,7 +404,7 @@ theme:
 
 ---
 
-## 10. Code Blocks
+## 11. Code Blocks
 
 !!! example "Section Metadata"
 
@@ -463,7 +467,7 @@ console.log("The concatenated string is:", result);
 
 --- 
 
-## 11. Content Tabs
+## 12. Content Tabs
 
 !!! example "Section Metadata"
 
@@ -538,7 +542,7 @@ This is some examples of content tabs.
 
 ---
 
-## 12. Admonitions (aka Callouts)
+## 13. Admonitions (aka Callouts)
 
 !!! example "Section Metadata"
 
@@ -584,7 +588,7 @@ Collapsible callout:
 
 ---
 
-## 13. Diagrams
+## 14. Diagrams
 
 !!! example "Section Metadata"
 
@@ -650,7 +654,7 @@ sequenceDiagram
 
 ---
 
-## 14. Footer
+## 15. Footer
 
 !!! example "Section Metadata"
 
@@ -687,7 +691,7 @@ copyright: Copyright &copy; 2024 James Willett
 
 ---
 
-## 15. Publish site to GitHub Pages
+## 16. Publish site to GitHub Pages
 
 !!! example "Section Metadata"
 
@@ -740,7 +744,7 @@ jobs:
 
 ---
 
-## 16. Outro
+## 17. Outro
 
 !!! example "Section Metadata"
 
@@ -750,7 +754,7 @@ jobs:
 
     **:octicons-git-branch-16: Demo Branch**: `N/A`
 
-- In this video we've seen how to create and deploy an entire Material for MkDocs documentation website completely from scratch, and taken a look at just a few of the awesome features that Material for MkDocs ships with.
+- In this video we've seen how to create and deploy an entire Material for MkDocs documentation website completely from scratch. We've then taken a look at just a few of the awesome features that Material for MkDocs ships with.
 
 ??? tip "B-roll ideas"
     Screencast of [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/getting-started/)
