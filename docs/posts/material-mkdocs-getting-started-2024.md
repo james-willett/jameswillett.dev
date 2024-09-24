@@ -11,138 +11,84 @@ categories:
 
 # Getting Started with Material for MkDocs 2024 Edition
 
-Script for the getting started with Material for MkDocs tutorial - 2024 edition.
+Supporting blog post for my **Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal** video on :simple-youtube: YouTube.
 
 <!-- more -->
 
-## Video Status
+## Introduction
+
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) is the ultimate framework for creating stunning, interactive documentation sites. In this tutorial, we’ll be creating a new documentation portal completely from scratch, and then hosting that on the web for free using [GitHub pages](https://pages.github.com/).
+
+Along the way, you'll learn just a handful of the awesome features that Material for MkDocs comes bundled with, such as:
+
+- Setting a **dynamic colour scheme**
+- Adding a splash of personality with **emojis**, **icons** and **logos** to make your content visually appealing
+- How to create **custom code blocks** that adjust based on the programming language specified
+- How to better organise your documentation using **content tabs**
+- How to empathize parts of your content using **admonitions** - also known as _callouts_
+- And how to bring your ideas to life with **statically rendered diagrams** directly in your docs
+
+???+ tip 
+    This is an in-depth tutorial. If this is your first time using Material for MkDocs then you're probably best to just follow it all through from the beginning.
+
+    But if you've used Material for MkDocs before and just want to know about a certain feature, you can use the __Table of contents__ on the right to jump around this guide at your leisure.
+
+!!! info "Supporting GitHub Repository"
+    I've created a supporting [GitHub repository](https://github.com/james-willett/material-mkdocs-youtube-2024) for all the code examples featured in this tutorial
+
+---
+
+## 'MkDocs' vs 'Material for MkDocs'
+
+Before we begin the tutorial, let's quickly go over the differences between [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), as there is often some confusion.
+
+Plain [**MkDocs**](https://www.mkdocs.org/) is a static site generator specifically designed for creating documentation websites. So by using MkDocs alone, you get a relatively vanilla and straightforward site for your documentation.
+
+On the other hand, [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/) is a theme built on top of MkDocs. It transforms your documentation site with a modern, responsive design inspired by Material Design principles. 
+
+What's important to note is that this theme doesn't just change the look; it enhances functionality with built-in plugins that support features like:
+
+- [Blog posts](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/) 
+- [Social cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
+- [Advanced search capabilities](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/) 
+- and lots more...
 
 !!! info
+    So to summarise, **MkDocs** provides the core functionality of building a static site, while **Material for MkDocs** signficantly elevates the visual and interactive experience of your documentation.
 
-    This is the script for the 2024 edition of the "Getting Started with Material for MkDocs" YouTube video.<br/><br/>
-    **Current Status**: Reviewing Script<br/>
-    **Last Updated**: 10-Sept-2024
-
-## 1. Intro
-
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Narration
-
-    **:material-text-box: Description**: Introduction to the video, outling the features we will add to our MkDocs Material website
-
-    **:octicons-git-branch-16: Demo Branch**: `N/A`
-
-- Welcome back to the channel! In today’s video we’re diving into Material for MkDocs, the ultimate framework for creating stunning, interactive documentation sites.
-- In this tutorial, we’ll be creating a new documentation portal completely from scratch, and then hosting that on the web for free using GitHub pages.
-
-??? tip "B-roll ideas"
-
-    Animated screencasts or screenshots of the completed site showing all the features below
-
-- Along the way, I’ll show you just a handful of the awesome features that Material for MkDocs comes bundled with, such as:
-
-    - Setting a dynamic colour scheme
-    - Adding a splash of personality with emojis, icons and logos to make your content visually appealing
-    - How to create custom code blocks that adjust based on the programming language specified
-    - How to better organise your content using Tabs
-    - How to empathize parts of your content using admonitions - also known as callouts
-    - And how to bring your ideas to life with statically rendered diagrams directly in your docs
-
-- Now you can follow along with me directly in this video, or if you prefer I have a written version of this tutorial available on my [website](https://jameswillett.dev/getting-started-with-material-for-mkdocs-2024-edition/)
-
-??? tip "B-roll ideas"
-
-    Animated screencasts or screenshots this [tutorial](https://jameswillett.dev/getting-started-with-material-for-mkdocs-2024-edition/)
-
-- I'll leave a link to the written tutorial in the description of this video.
-- This is going to be a pretty in-depth tutorial. If this is your first time using Material for MkDocs then you're probably best to just follow it all through from the beginning.
-- But if you've used Material for MkDocs before and just want to know about a certain feature, I've left all the timecodes below so you can jump around the video at your leisure.
-- So if this sounds like something you'd be interested in, then breathe in, breathe out, and let’s explore this together 🙂
+Now that we understand the differences, let's get to work on setting up our new **Material for MkDocs** portal.
 
 ---
 
-## 2. 'MkDocs' vs 'Material for MkDocs'
+## Prerequisites
 
-!!! example "Section Metadata"
+These are the _prerequistes_ you’ll need to have installed if you want to follow along with this tutorial:
 
-    **:material-video-box: Recording Type**: Narration
+- [:simple-python: Python](https://www.python.org/downloads/)
+    - [pip](https://pip.pypa.io/en/stable/installation/) - the Python package manager (included by default in Python 3.4 and later)
+- [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/) - or any other IDE of your choice
+- [:simple-github: GitHub Account](http://github.com) - as we will deploy the site on [GitHub pages](https://pages.github.com/)
 
-    **:material-text-box: Description**: Highlight the differences between the Material theme for MkDocs, and the MkDocs tool itself
-
-    **:octicons-git-branch-16: Demo Branch**: `N/A`
-
-- Before we dive into the demo, let's quickly go over the differences between [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), as there is often some confusion.
-
-??? tip "B-roll ideas"
-    - MkDocs logo pops up on my left, Material on my right
-
-
-- Plain **MkDocs** is a static site generator specifically designed for creating documentation websites. So by using MkDocs alone, you get a relatively vanilla and straightforward site for your documentation.
-
-??? tip "B-roll ideas"
-    - Start with a screen recording showing a simple MkDocs site being generated from Markdown files.
-    - Transition to a split-screen comparison: on one side, show the basic MkDocs site, and on the other, a site using Material for MkDocs with its enhanced design.
-
-- On the other hand, **Material for MkDocs** is a theme built on top of MkDocs. It transforms your documentation site with a modern, responsive design inspired by Material Design principles. Now, what's important to note is that this theme doesn't just change the look; it enhances functionality with built-in plugins that support features like blog posts, social cards, advanced search capabilities and loads more.
-
-- So basically, **MkDocs** provides the core functionality of building a static site, while **Material for MkDocs** signficantly elevates the visual and interactive experience of your documentation.
-
-- Ok, now that's out of the way, let's get to work on setting up our new **Material for MkDocs site**.
 
 ---
 
-## 3. Prereqs
-
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Narration
-
-    **:material-text-box: Description**: Cover off the prerequisites that the user needs to have installed to follow along with the tutorial
-
-    **:octicons-git-branch-16: Demo Branch**: `N/A`
-
-- Before we jump in, let’s go over the prerequistes you’ll need to have installed if you want to follow along with this tutorial.
-
-??? tip "B-roll ideas"
-    Mac and Windows logos flash on screen
-
-- Firstly, do be aware that i’ll be conducting this tutorial on a Mac. If you’re following on Windows then some of the commands we type into the terminal will be ever so slightly different… but I’ll try to call those out.
-
-??? tip "B-roll ideas"
-    List of these prereqs appear to left or right of me
-
-- So we’re going to be using the __PYTHON__ version of MkDocs in this tutorial, and you’ll need to have PYTHON 3 installed. I’ll be using version `3.12.4` in this video, so either that or a later version should work fine.
-- We’ll be using the Python package manager called **PIP** to install the required dependencies… but if you're running Python 3.4 or later then PIP is included anyway by default… otherwise if you’re using an earlier version of Python then you might need to install PIP.
-- Now, to follow along with the coding, it’s helpful if you have an IDE installed, and I’ll be using Visual Studio Code in this video.
-- And finally, we’ll be publishing our documentation portal on GITHUB PAGES… so you’ll need to have an account on [GitHub](http://github.com) and ideally have git installed and setup to work from the command line as well.
-
-And that’s all you should need. So let’s jump over to a terminal and get started!
-
----
-
-## 4. Initial Installation
-
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Screencast
-
-    **:material-text-box: Description**: In this section we go over creating the Python virtual environment and creating a vanilla MkDocs site
-
-    **:octicons-git-branch-16: Demo Branch**: `1_InitialInstallation`
+## Initial Installation
 
 - Open a terminal in the folder that you want to create the project in
-- Do `which python` to show my Python is aliased to `python3`
-- Do `which python3` to show my Python is installed with Homebrew
-    - Mention if you are running on Windows you can do **`where python` instead**
-- Virtual environment setup with `python -m venv venv`
-- `source venv/bin/activate` to activate virtual environment 
-    - (on **Windows**: `.\venv\Scripts\activate`)
+- Type `which python` or `which python3` to check Python is installed
+??? note "To check Python location on :material-microsoft-windows: Windows"
+    Type `where python` instead on the command prompt or Powershell terminal
+- Setup a [Python virtual environment](https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment) by typing `python -m venv venv`
+- Type `source venv/bin/activate` to activate the virtual environment
+??? note "To activate Python virtual environment on :material-microsoft-windows: Windows"
+    Type `.\venv\Scripts\activate` instead
 - Check pip version `pip --version`
 - Install mkdocs material - `pip install mkdocs-material`
 - Open Visual studio code in this folder with `code .`
-- Open a terminal within VS code and create the new site `mkdocs new .`
-- Add basic `mkdocs.yml` configuration:
+- Open a terminal within Visual Studio code
+- Activate the virtual environment on the new terminal with `source venv/bin/activate`
+- Create a new site `mkdocs new .`
+- Add the following basic `mkdocs.yml` configuration:
 
 ```yaml title="mkdocs.yml"
 site_name: My MkDocs Material Documentation
@@ -151,26 +97,21 @@ theme:
   name: material
 ```
 
-- Do `mkdocs serve` to launch the site
+- Type `mkdocs serve` to launch the site
 - Check the site at [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 5. Add Yaml Schema Validation
+## Add Yaml Schema Validation
 
-!!! example "Section Metadata"
+To activate most of the useful features in MkDocs Material, we need to make changes to the `mkdocs.yml` file. Making these changes is much easier with the help of [YAML schema validation](https://squidfunk.github.io/mkdocs-material/schema.json).
 
-    **:material-video-box: Recording Type**: Screencast
+- Within the **Extensions** tab of Visual Studio Code, install the [Red Hat VS Code Yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
+- In VsCode open `settings.json`. 
 
-    **:material-text-box: Description**: Add MkDocs Material Yaml Schema Validation
-
-    **:octicons-git-branch-16: Demo Branch**: `N/A`
-
-- Explain that to activate most of the useful features in MkDocs Material, we need to make a few changes to the `mkdocs.yml` file… making these changes is much easier with the help of YAML schema validation.
-- Install the `Yaml` plugin within Extensions
-    - Plugin can also be found on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
-- In VsCode open `settings.json`. You can open this by clicking on settings in the bottom left gear icon, then clicking the document icon in the top right.
-- Add the following at the bottom:
+???+ tip "How to open `settings.json` in :material-microsoft-visual-studio-code: Visual Studio Code"
+    You can open `settings.json` by clicking the :gear: **gear** icon in the bottom left, then clicking the :page_facing_up: **document** icon in the top right.
+- Add the following at the bottom of the `settings.json` file:
 
 ```json title="settings.json"
   "yaml.schemas": {
@@ -186,56 +127,57 @@ theme:
   ]
 ```
 
-- Show the `mkdocs.yml` file and how we now get popups when we mouse over elements
+Now when you mouse-over any of the entries in the `mkdocs.yml` file, you'll see a popup with more information about that entry. Any errors in the yaml file will also be highlighted.
 
 ---
 
-## 6. Adjust Color Scheme
+## Adjust Color Scheme
 
-!!! example "Section Metadata"
+We can easily change the color scheme of our documentation.
 
-    **:material-video-box: Recording Type**: Screencast
+### Switch to Dark Mode
 
-    **:material-text-box: Description**: Setup Light and Dark mode toggle within MkDocs, and change the colour scheme
-
-    **:octicons-git-branch-16: Demo Branch**: `2_AdjustColor`
-
-
-- Let's start making some changes to the style of our documentation, starting with the color scheme.
-- I'll start by changing the color scheme to black. Add this to the `mkdocs.yml` file:
+Start by changing the color scheme to :black_circle: **dark**. Add this to the `mkdocs.yml` file:
 
 ```yaml title="mkdocs.yml"
 theme:
   name: material
-  palette: 
+  palette:
     scheme: slate
 ```
 
-- Change the primary colour to green by adding `primary: green` under the palette:
+### Primary Colour
+
+Let's also change the **primary colour** in our documentation to :green_circle: **green** by adding `primary: green` under the palette:
 
 ```yaml title="mkdocs.yml" hl_lines="5"
 theme:
   name: material
-  palette: 
+  palette:
     scheme: slate
     primary: green
 ```
 
-- We can see that this makes the banner green, and also the hyperlinks green.
-- Let's also change the accent colour to `deep purple`:
+We can see that this makes the banner green, and also the hyperlinks green.
+
+### Accent Colour
+
+Let's also change the accent colour to :purple_circle: **`deep purple`** :
 
 ```yaml title="mkdocs.yml" hl_lines="6"
 theme:
   name: material
-  palette: 
+  palette:
     scheme: slate
     primary: green
     accent: deep purple
 ```
 
-- Now when we hover over the links with the mouse, they turn purple.
+Now when we hover over the links with the mouse, they turn purple.
 
-- Another cool thing we can easily do in Material for MkDocs is add a toggle to our site that allows the user to switch between light and dark modes. Add this to `palette` in the `mkdocs.yml` file to enable this:
+### Toggle Light/Dark Modes
+
+We can also add a toggle to our site that allows the user to switch between :white_circle: **light** and :black_circle: **dark** modes. Add this to `palette` in the `mkdocs.yml` file to enable this:
 
 ```yaml title="mkdocs.yml"
 theme:
@@ -258,33 +200,19 @@ theme:
       accent: deep orange
 ```
 
-- There are lots of other configuration options available to you in Material for MkDocs if you want to adjust the colour, for example adding custom colours or automatically switching between light and dark mode based on the time of day
+There are lots of other configuration options available to you in Material for MkDocs if you want to adjust the colour, for example adding [**custom colours**](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors) or [**automatically switching between light and dark mode**](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode) based on the time of day.
 
-??? tip "B-roll ideas"
-    Scrolling screenshot of [colors documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors)
-
-- For more information, check the [colors documentation page](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors)
+For more information, check the [colors documentation page](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors).
 
 ---
 
-## 7. Adjust Font
+## Adjust Font
 
-!!! example "Section Metadata"
+Material for MkDocs supports any [Google font](https://fonts.google.com/?query=Montserrat) directly out of the box.
 
-    **:material-video-box: Recording Type**: Screencast
+### Default Font
 
-    **:material-text-box: Description**: Change the font used on the MkDocs website
-
-    **:octicons-git-branch-16: Demo Branch**: `3_AdjustFont`
-
-- Let's see how we can change the font in our documentation.
-
-??? tip "B-roll ideas"
-    Scrolling screenshot of [Google Fonts](https://fonts.google.com/?query=Montserrat)
-
-- Material for MkDocs supports any [Google font](https://fonts.google.com/?query=Montserrat) directly out of the box.
-
-- Let's change the default font to `Merriweather Sans` :
+Let's change the default font to `Merriweather Sans`:
 
 ```yaml title="mkdocs.yml" hl_lines="3"
 theme:
@@ -292,7 +220,9 @@ theme:
     text: Merriweather Sans
 ```
 
-- We can also change the font of the `code` in our docs:
+### Code Font
+
+We can also change the font of the `code` in our docs:
 
 ```yaml title="mkdocs.yml" hl_lines="4"
 theme:
@@ -301,46 +231,17 @@ theme:
     code: Red Hat Mono
 ```
 
-??? tip "B-roll ideas"
-    Scrolling screenshot of [fonts documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/#customization)
-
-- Now if you want to add additional fonts beyond Google fonts, or change other font configuration, do check the [Material font documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/)
+If you want to add additional fonts beyond Google fonts, or change other font configuration, do check the [Material font documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/)
 
 ---
 
-## 8. Reminder to Like and Subscribe 
+## Emojs
 
-!!! example "Section Metadata"
+Material for MkDocs offers the possibility of using over **10,000 emojis and icons** in your documentation with minimal configuration.
 
-    **:material-video-box: Recording Type**: Narration
+Browse through all available emojis and icons on the [Material Emoji Documentation](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search).
 
-    **:material-text-box: Description**: remind viewers to like and subscribe to the channel
-
-    **:octicons-git-branch-16: Demo Branch**: `N/A`
-
-- Before we go on, if you’re finding this video helpful, please hit the like button down below, and subscribe to the channel for more videos just like this.
-- And if you're looking for more guides and tutorials around Material for MkDocs and technical documentation in general, then do checkout my website. I'll leave a link in the description.
-- OK. Let’s carry on setting up our MkDocs Material site!
-
----
-
-## 9. Using Emojs
-
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Screencast
-
-    **:material-text-box: Description**: Show how to configure Emojis and Icons and use them in the documentation
-
-    **:octicons-git-branch-16: Demo Branch**: `4_Emojs`
-
-- Another cool thing about Material for MkDocs is the possibility of using over 10,000 emojis and icons in your documentation, pretty much out of the box
-
-??? tip "B-roll ideas"
-    Screencast of searching for [Emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search)
-
-- If you head over to the [Material Emoji Documentation](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search), you can easily search through everything that is available.
-- To add the ability to use these to your documentation portal, add this config to your `mkdocs.yml`:
+To add the ability to use these to your documentation portal, add this config to your `mkdocs.yml`:
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -350,25 +251,19 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 ```
 
-- Then add a sentence to the `index.md` file with a couple of emojis
+Then simply add a sentence to any of your documentation files (e.g.`index.md`) with the emoji or icon code.
 
 ---
 
-## 10. Logos and Icons
+## Logos and Icons
 
-!!! example "Section Metadata"
+Now that we have emojis and icons setup in our documentation, we can easily change the logo of our site.
 
-    **:material-video-box: Recording Type**: Screencast
+### Setting Logo to an Icon
 
-    **:material-text-box: Description**: Show how to change the logo and favicon of the site
+[Search](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/) for a suitable icon for your logo (for example `solid-w`).
 
-    **:octicons-git-branch-16: Demo Branch**: `5_LogoAndIcons`
-
-- Now that we have emojis and icons setup in our documentation, let's see how we can change the logo of our site.
-
-### Icon for Logo
-- Search for `solid-w` and find the fontawesome icon we want to use for the logo.
-- Change the icon by making this change to the `mkdocs.yml`
+Change the icon by making this change to the `mkdocs.yml`
 
 ```yaml title="mkdocs.yml"
 theme:
@@ -376,10 +271,12 @@ theme:
     logo: fontawesome/solid/w
 ```
 
-### Image for Logo
-- Mention how we could also change the logo to an image if we prefer.
+### Setting Logo to an Image
+
+If you would prefer to set the logo of your site to your own custom image, follow these steps:
+
 - Inside the `docs` folder create an `assets` folder.
-- Add the `logo.png`, which is our site logo that I generated earlier.
+- Add the `logo.png` file to this folder (i.e. the file with the logo you want to use)
 - Now change `mkdocs.yml` to:
 
 ```yaml title="mkdocs.yml"
@@ -387,9 +284,11 @@ theme:
   logo: assets/logo.png
 ```
 
-### Change Favicon
-- Let's change the favicon as well.
-- First i'll add the `favicon.ico` file to the `assets` folder we just created.
+### Setting the Favicon
+
+We can also set the Favicon for our site in a similar way:
+
+- First add the `favicon.ico` file to the `assets` folder we just created.
 - Then adjust `mkdocs.yml` to:
 
 ```yaml title="mkdocs.yml"
@@ -397,20 +296,16 @@ theme:
   favicon: assets/favicon.ico
 ```
 
-??? tip "B-roll ideas"
-    Screencast of [icon and logos documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/)
-
-- You can change other icons on your MkDocs Material site in a similar way, but if you want to know more check the [Material Logo and Icons Documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/)
+You can change other icons on your MkDocs Material site in a similar way, but if you want to know more check the [Material Logo and Icons Documentation](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/).
 
 ---
 
-## 11. Code Blocks
+## Code Blocks
 
-!!! example "Section Metadata"
+One of the best features of Material for MkDocs is it's ability to [display code](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) in a clear, crisp and distinctive manner.
 
-- One of the best features of Material for MkDocs is it's ability to display code in a clear, crisp and distinctive manner.
-- Let's create a new page in our documentation called `code-examples.md`
-- And add in the following example Python code:
+- Create a new page in your documentation called `code-examples.md`.
+- Add the following example :simple-python: Python code:
 
 ```py title="code-examples.md"
 # Function to add two numbers
@@ -422,8 +317,7 @@ result = add_two_numbers(5, 3)
 print('The sum is:', result)
 ```
 
-- Show the viewer the code in the browser - it looks OK but not colouring, let's change that next
-- We need to add some extra configuration to our `mkdocs.yml`:
+The code will display in a code block in the documentation portal, but won't have syntax colouring. To enable syntax colouring, add this extra configuration to our `mkdocs.yml`:
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -436,24 +330,79 @@ markdown_extensions:
   - pymdownx.superfences
 ```
 
-- Now go back and show the code is nicely highlighted
-- Mention that if you want to use another language find the lexers (short names for the language) on this [pygments](https://pygments.org/docs/lexers/#lexers-for-javascript-and-related-languages) page
-    - e.g. [typescript](https://pygments.org/docs/lexers/#pygments.lexers.javascript.TypeScriptLexer)
+The previous code block we added will now be nicely highlighted.
+
+If you want to add code in another language, find the lexers (short names for the language) on this [pygments](https://pygments.org/docs/lexers/#lexers-for-javascript-and-related-languages) page. For example:
+
+- [:simple-typescript: Typescript](https://pygments.org/docs/lexers/#pygments.lexers.javascript.TypeScriptLexer)
+- [:fontawesome-brands-java: Java](https://pygments.org/docs/lexers/#pygments-lexers-for-jvm-languages)
+- [:fontawesome-brands-golang: GoLang](https://pygments.org/docs/lexers/#lexers-for-the-google-go-language)
 
 ### Add Title
 
-- Add a title to the codeblock by doing `py title="add_numbers.py"`
+- Add a title to the codeblock by typing `py title="add_numbers.py"`:
+
+````markdown title="Code block with title"
+```py title="add_numbers.py" 
+# Function to add two numbers
+def add_two_numbers(num1, num2):
+    return num1 + num2
+
+# Example usage
+result = add_two_numbers(5, 3)
+print('The sum is:', result)
+```
+````
+
+<div class="result" markdown>
+```py title="code_examples.md" 
+# Function to add two numbers
+def add_two_numbers(num1, num2):
+    return num1 + num2
+
+# Example usage
+result = add_two_numbers(5, 3)
+print('The sum is:', result)
+```
+</div>
 
 ### Add Line Numbers
 
-- Add line numbers by doing `py linenums="1"`
-- Also show the line numbers can start from a different number
+Add line numbers by typing `py linenums="1"`:
+
+````markdown title="Code block with line numbers"
+```py title="add_numbers.py" linenums="1"
+# Function to add two numbers
+def add_two_numbers(num1, num2):
+    return num1 + num2
+
+# Example usage
+result = add_two_numbers(5, 3)
+print('The sum is:', result)
+```
+````
+
+<div class="result" markdown>
+```py title="code_examples.md" linenums="1"
+# Function to add two numbers
+def add_two_numbers(num1, num2):
+    return num1 + num2
+
+# Example usage
+result = add_two_numbers(5, 3)
+print('The sum is:', result)
+```
+</div>
+
+You can also start the line numbers from a different number e.g. `py linenums="5"`
 
 ### Highlight Lines
 
-- To highlight lines do `py hl_lines="2-4"`
-- Use another codeblock to show this:
+To highlight lines type `py hl_lines="2-4"`. 
 
+Here is another codeblock to show this:
+
+````markdown title="Highlight Lines"
 ```js title="code-examples.md" linenums="1" hl_lines="2-4"
 // Function to concatenate two strings
 function concatenateStrings(str1, str2) {
@@ -464,21 +413,26 @@ function concatenateStrings(str1, str2) {
 const result = concatenateStrings("Hello, ", "World!");
 console.log("The concatenated string is:", result);
 ```
+````
 
---- 
+<div class="result" markdown>
+```js title="code-examples.md" linenums="1" hl_lines="2-4"
+// Function to concatenate two strings
+function concatenateStrings(str1, str2) {
+  return str1 + str2;
+}
 
-## 12. Content Tabs
+// Example usage
+const result = concatenateStrings("Hello, ", "World!");
+console.log("The concatenated string is:", result);
+```
+</div>
 
-!!! example "Section Metadata"
+---
 
-    **:material-video-box: Recording Type**: Screencast
+## Content Tabs
 
-    **:material-text-box: Description**: Show some examples of how to use content tabs
-
-    **:octicons-git-branch-16: Demo Branch**: `7_ContentTabs`
-
-- Talk briefly about when content tabs would be useful, e.g. for different code examples
-- To enable them, add this configuration to `mkdocs.yml`:
+Content tabs are useful when you want to group alternative content together. To enable content tabs add the following to the `mkdocs.yml` file:
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -490,7 +444,7 @@ markdown_extensions:
 - Create a new page called `content-tabs.md`
 - Add the following to show `generic` content tabs:
 
-```
+```markdown title="content-tabs.md"
 ## Content Tabs
 
 This is some examples of content tabs.
@@ -514,9 +468,9 @@ This is some examples of content tabs.
     3. Third item
 ```
 
-- Then show how we can use content tabs with code blocks, with this:
+Here is an example with different code blocks:
 
-```
+````markdown title="content-tabs.md"
 ### Code Blocks in Content Tabs
 
 === "Python"
@@ -538,22 +492,15 @@ This is some examples of content tabs.
 
     main();
     ```
-```
+````
 
 ---
 
-## 13. Admonitions (aka Callouts)
+## Admonitions (aka Callouts)
 
-!!! example "Section Metadata"
+Admonitions - also known as callouts - are great for highlighting parts of the documentation.
 
-    **:material-video-box: Recording Type**: Screencast
-
-    **:material-text-box: Description**: Show some examples of how to use admonitions
-
-    **:octicons-git-branch-16: Demo Branch**: `8_Admonitions`
-
-- Admonitions - also known as callouts - are great for highlighting parts of the documentation.
-- Add this configuration to `mkdocs.yml`:
+To enable them, add this configuration to the `mkdocs.yml`:
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -561,8 +508,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 ```
+
 - Create a new page called `admonitions.md`
-- Show this example admonition with a title:
+- This is an example of an adominition with a title:
 
 ```
 !!! note "Title of the callout"
@@ -571,8 +519,15 @@ markdown_extensions:
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 ```
+!!! note "Title of the callout"
 
-- Show a collapisble admonition:
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+### Collapsible Admonitions
+
+You can also have a collapisble admonition:
 
 ```
 Collapsible callout:
@@ -583,27 +538,27 @@ Collapsible callout:
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 ```
+??? info "Collapsible callout"
 
-- Briefly talk through the other examples shown on the [Admonitions documentation]( https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+Check the [Admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) for other examples of admonitions you can use.
 
 ---
 
-## 14. Diagrams
+## Diagrams
 
-!!! example "Section Metadata"
+Material for MkDocs allows you to easily implement statically rendered diagrams in your documentation. Examples of diagrams you might include are:
 
-    **:material-video-box: Recording Type**: Screencast
+- [Flow charts](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-flowcharts)
+- [Sequence diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-sequence-diagrams)
+- [State diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-state-diagrams)
+- [Class diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-class-diagrams)
+- [Entity-relationship diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-entity-relationship-diagrams)
 
-    **:material-text-box: Description**: Show some examples of how to use diagrams
-
-    **:octicons-git-branch-16: Demo Branch**: `9_Diagrams`
-
-- Talk about use cases for diagrams such as flow charts, sequence diagrams, state diagrams
-
-??? tip "B-roll ideas"
-    Screencast of [diagrams documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
-
-- Add configuration to `mkdocs.yml`:
+To enable diagrams add this configuration to the `mkdocs.yml`:
 
 ```yaml title="mkdocs.yml"
 markdown_extensions:
@@ -615,9 +570,9 @@ markdown_extensions:
 ```
 
 - Create a new page called `diagram-examples.md`
-- Add a flowchart example:
+- Here is a **flowchart** example:
 
-```
+````markdown title="diagram-examples.md"
 # Diagram Examples
 
 ## Flowcharts
@@ -630,10 +585,21 @@ graph LR
   D --> B;
   B ---->|No| E[Success!];
 ```
+````
 
-- Add a sequence diagram:
-
+```mermaid
+graph LR
+  A[Start] --> B{Failure?};
+  B -->|Yes| C[Investigate...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Success!];
 ```
+
+
+- This is a **sequence diagram** example:
+
+````markdown title="diagram-examples.md"
 ## Sequence Diagrams
 
 ```mermaid
@@ -648,23 +614,27 @@ sequenceDiagram
   Terminal->>Database: Request customer data
   Database-->>Terminal: Customer data
 ```
+````
+```mermaid
+sequenceDiagram
+  autonumber
+  Server->>Terminal: Send request
+  loop Health
+      Terminal->>Terminal: Check for health
+  end
+  Note right of Terminal: System online
+  Terminal-->>Server: Everything is OK
+  Terminal->>Database: Request customer data
+  Database-->>Terminal: Customer data
+```
 
-- Mention other examples of diagrams and show the [diagrams documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-state-diagrams)
-
+Remember to check the [diagrams documentation](https://squidfunk.github.io/mkdocs-material/reference/diagrams/#using-state-diagrams) for further diagram examples.
 
 ---
 
-## 15. Footer
+## Footer
 
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Screencast
-
-    **:material-text-box: Description**: Demonstrate how to add the footer and configure it
-
-    **:octicons-git-branch-16: Demo Branch**: `10_Footer`
-
-- Enable the navigation footer in `mkdocs.yml`:
+We can enable the navigation footer by adding the following to the `mkdocs.yml`:
 
 ```yaml title="mkdocs.yml"
 theme:
@@ -672,7 +642,7 @@ theme:
     - navigation.footer
 ```
 
-- Add the social icons to the footer:
+You might want to add social icons to your footer like this:
 
 ```yaml title="mkdocs.yml"
 extra:
@@ -683,7 +653,7 @@ extra:
       link: https://linkedin.com/in/willettjames
 ```
 
-- Add the copyright notice:
+And you can add the copyright notice:
 
 ```yaml title="mkdocs.yml"
 copyright: Copyright &copy; 2024 James Willett
@@ -691,24 +661,16 @@ copyright: Copyright &copy; 2024 James Willett
 
 ---
 
-## 16. Publish site to GitHub Pages
+## Publish site to GitHub Pages
 
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Screencast
-
-    **:material-text-box: Description**: Show how to push the documentation to a GitHub repo then publish it on GitHub pages
-
-    **:octicons-git-branch-16: Demo Branch**: `11_Publish`
-
-- Create the `.github/workflows/ci.yml` file and paste in the example code:
+In order to publish our site on [GitHub Pages](https://pages.github.com/), first create the `.github/workflows/ci.yml` file and paste in the example code:
 
 ```yaml title=".github/workflows/ci.yml"
-name: ci 
+name: ci
 on:
   push:
     branches:
-      - master 
+      - master
       - main
 permissions:
   contents: write
@@ -724,42 +686,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
 ```
 
 - Create a brand new GitHub repository
 - Hook up that GitHub repository remote with the project code (i.e. do `git init` then follow instructions to add the remote)
 - Push branch to `main` on the GitHub repository
-- Go to GitHub and into settings and change **PAGES** to `deploy from branch` and choose the `gh-pages` branch.
-- Show GitHub Action running that deploys the site
-- Show documentation is deployed and accessible
-
----
-
-## 17. Outro
-
-!!! example "Section Metadata"
-
-    **:material-video-box: Recording Type**: Narration
-
-    **:material-text-box: Description**: Summary of the video and where to go next
-
-    **:octicons-git-branch-16: Demo Branch**: `N/A`
-
-- In this video we've seen how to create and deploy an entire Material for MkDocs documentation website completely from scratch. We've then taken a look at just a few of the awesome features that Material for MkDocs ships with.
-
-??? tip "B-roll ideas"
-    Screencast of [MkDocs Material documentation](https://squidfunk.github.io/mkdocs-material/getting-started/)
-
-- We've only really scratched the surface of what Material offers in this video... so to learn more about the many other features that are on offer, do check out the [official documentation](https://squidfunk.github.io/mkdocs-material/getting-started/)
-
-- But what about you? Are you using Material for MkDocs? What other features would you like to see covered? Let me know in the comments down below, I'd love to hear from you.
-- But that's all for this video, I'll see you in the next one. 
+- Go to GitHub and into settings and change __pages__ to `deploy from branch`, choose the `gh-pages` branch.
+- A GitHub Action will trigger that deploys the site
+    - For example [https://james-willett.github.io/mkdocs-material-tutorial-2024/](https://james-willett.github.io/mkdocs-material-tutorial-2024/)
