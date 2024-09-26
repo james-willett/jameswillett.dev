@@ -9,9 +9,13 @@ categories:
   - Material for MkDocs
 ---
 
-# Getting Started with Material for MkDocs 2024 Edition
+# Getting Started with Material for MkDocs
 
-Supporting blog post for my **Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal** video on :simple-youtube: YouTube.
+Supporting blog post for my **Material for MkDocs: Full Tutorial To Build And Deploy Your Docs Portal** video on [:simple-youtube: YouTube](https://www.youtube.com/watch?v=xlABhbnNrfI){:target="\_blank"}.
+
+[![YouTube Thumbnail Material MkDocs]](./material-mkdocs-getting-started-2024.md)
+
+[YouTube Thumbnail Material MkDocs]: material-mkdocs-getting-started-2024/MkDocs2024_Thumbnail2.jpg
 
 <!-- more -->
 
@@ -34,7 +38,7 @@ Along the way, you'll learn just a handful of the awesome features that Material
     But if you've used Material for MkDocs before and just want to know about a certain feature, you can use the __Table of contents__ on the right to jump around this guide at your leisure.
 
 !!! info "Supporting GitHub Repository"
-    I've created a supporting [GitHub repository](https://github.com/james-willett/material-mkdocs-youtube-2024) for all the code examples featured in this tutorial
+    I've created a supporting [GitHub repository](https://github.com/james-willett/material-mkdocs-youtube-2024){:target="\_blank"} for all the code examples featured in this tutorial
 
 ---
 
