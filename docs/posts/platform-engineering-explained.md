@@ -7,31 +7,29 @@ description: >
 categories:
   - Platform Engineering
 links:
-  - YouTube video of this post: https://youtube.com
+  - YouTube video of this post: https://www.youtube.com/watch?v=-hvA-5N9LDc
 ---
 
 # Platform Engineering Explained
 
-In this post we will explore what Platform Engineering is, and how it relates to 
+In this post we will explore what Platform Engineering is, and how it relates to
 modern software development.
+
+[![YouTube Thumbnail Platform Engineering]](./platform-engineering-explained.md)
+
+[YouTube Thumbnail Platform Engineering]: platform-engineering-explained/PlatformEngThumbnail.jpg
 
 <!-- more -->
 
 ## YouTube Video
 
-This blog post has an accompanying [YouTube video](https://youtube.com) that you may prefer to view 
-instead of reading this post (or watch alongside!).
-
-[![YouTube Thumbnail]](https://youtube.com){:target="_blank"}
-
-
-  [YouTube Thumbnail]: platform-engineering-explained/PlatformEngThumbnail.jpg
+This blog post has an accompanying [YouTube video](https://www.youtube.com/watch?v=-hvA-5N9LDc){:target="\_blank"} that you may prefer to view instead of reading this post (or watch alongside!).
 
 ## What is Platform Engineering?
 
-**Platform Engineering** essentially boils down to the *process of building tools, frameworks and processes that get consumed by software development teams* **internally** within an organization. 
+**Platform Engineering** essentially boils down to the _process of building tools, frameworks and processes that get consumed by software development teams_ **internally** within an organization.
 
-By providing these artifacts and configurations to consuming teams (through an [Internal Developer Platform](https://internaldeveloperplatform.org/){:target="_blank"}), the idea is that they’ll become more self-sufficient.
+By providing these artifacts and configurations to consuming teams (through an [Internal Developer Platform](https://internaldeveloperplatform.org/){:target="\_blank"}), the idea is that they’ll become more self-sufficient.
 
 If that doesn’t make much sense, then don’t panic. We’re going to explain it clearly below! :sunglasses:
 
@@ -39,11 +37,11 @@ The easiest way to explain **Platform Engineering** is to go back in time a bit,
 
 ## Software Development Before Agile
 
-In the pre-Agile days of software development (i.e. the [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model){:target="_blank"}), a typical development team would basically have a bunch of developers writing application code.
+In the pre-Agile days of software development (i.e. the [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model){:target="\_blank"}), a typical development team would basically have a bunch of developers writing application code.
 
-Once the code was written, the team would throw the application over to the software testers (who lived *independently* from the team) for them to test.
+Once the code was written, the team would throw the application over to the software testers (who lived _independently_ from the team) for them to test.
 
-When the code was ready to be built (and remember, this is before the era of :simple-docker:{ .docker } [Docker](https://www.docker.com/){:target="_blank"} :simple-docker:{ .docker } and [containerisation](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-container-security/what-is-containerization/#:~:text=Containerization%20is%20a%20type%20of,and%20highly%20conducive%20to%20automation.){:target="_blank"}), they’d send the app code to another team and have them build it.
+When the code was ready to be built (and remember, this is before the era of :simple-docker:{ .docker } [Docker](https://www.docker.com/){:target="\_blank"} :simple-docker:{ .docker } and [containerisation](https://www.checkpoint.com/cyber-hub/cloud-security/what-is-container-security/what-is-containerization/#:~:text=Containerization%20is%20a%20type%20of,and%20highly%20conducive%20to%20automation.){:target="\_blank"}), they’d send the app code to another team and have them build it.
 
 Now the code is ready to run in production, so the developer team send it over to an **Ops** team. This team would take care of deploying it in production, running it and monitoring it.
 
@@ -69,7 +67,7 @@ Next along came :simple-docker:{ .docker }Docker:simple-docker:{ .docker }, and 
   <figcaption> DevOps Teams
 </figure>
 
-So now we have a team that is pretty capable of developing working software. 
+So now we have a team that is pretty capable of developing working software.
 
 But the problem of having to throw it over the wall to an operations team when it comes to run it in production remains.
 
@@ -77,33 +75,33 @@ Enter **DevOps** to save the day. :muscle:
 
 ## Moving to DevOps
 
-So we combined everyone into one team. *Developers, testers and ops* came together to form the [DevOps](https://www.atlassian.com/devops) teams that we all know and love. :octicons-heart-fill-24:{ .heart }
+So we combined everyone into one team. _Developers, testers and ops_ came together to form the [DevOps](https://www.atlassian.com/devops) teams that we all know and love. :octicons-heart-fill-24:{ .heart }
 
-And in many cases, this has worked well. Teams are able to focus on building dedicated functionality into their microservices. The culture of throwing software over the wall :material-wall:{ .wall } for someone else to deal with and maintain is gone. 
+And in many cases, this has worked well. Teams are able to focus on building dedicated functionality into their microservices. The culture of throwing software over the wall :material-wall:{ .wall } for someone else to deal with and maintain is gone.
 
-DevOps teams are responsible for software over its *entire lifecycle*. Not only from development and deployment, but also for the duration of its lifetime in production.
+DevOps teams are responsible for software over its _entire lifecycle_. Not only from development and deployment, but also for the duration of its lifetime in production.
 
-This is mostly where we are today. And everything is fine and dandy. 
+This is mostly where we are today. And everything is fine and dandy.
 
 Accept... it isn’t.
 
-The problem is that we naturally keep creating new microservices. 
+The problem is that we naturally keep creating new microservices.
 
-Each service either needs a *new Agile team* to be formed.
+Each service either needs a _new Agile team_ to be formed.
 
-Or the service needs to be created and maintained by an *existing team*.
+Or the service needs to be created and maintained by an _existing team_.
 
-But teams are still running their other services in production! 
+But teams are still running their other services in production!
 
 And they are still developing new **features**, fixing **vulnerabilities** and squashing **bugs**. :octicons-bug-16:
 
-On top of that, the complexity of building, deploying and running software continues to grow. *Agile teams are doing so many things*, they need to do significant work just to keep up with the latest **trends, processes** and **disciplines**.
+On top of that, the complexity of building, deploying and running software continues to grow. _Agile teams are doing so many things_, they need to do significant work just to keep up with the latest **trends, processes** and **disciplines**.
 
 And then we have the tech layoffs, that started following the COVID-19 pandemic.
 
-Suddenly we started losing people in the Agile teams. 
+Suddenly we started losing people in the Agile teams.
 
-Or even losing entire teams altogether. 
+Or even losing entire teams altogether.
 
 These teams and people often aren’t replaced, and the organisation says “we need to do more with less!”.
 
@@ -115,21 +113,21 @@ This is where Platform Engineering comes into the picture.
 
 So we have our development teams, full of DevOps engineers, building all different types of applications.
 
-It could be a business application. 
+It could be a business application.
 
 It could be a :simple-kubernetes:{ .docker } [Kubernetes](https://kubernetes.io/) :simple-kubernetes:{ .docker } cluster with infrastructure as code.
 
 It could be a security application used internally.
 
-It doesn’t really matter, everyone is building their application and then running it and supporting it for its lifecycle. 
+It doesn’t really matter, everyone is building their application and then running it and supporting it for its lifecycle.
 
 Teams might consume services (such as security, hosted services etc.) from elsewhere, but they are still responsible for configuring and implementing whatever it is they consume.
 
 And in the middle appears a new team. These guys and gals are a team of developers as well, just like the others. They are also building an application. This application is called the **Internal Developer Platform**, or **IDP**.
 
-What the IDP does is to put a layer on top of all the services that the teams are consuming. The Platform engineering team with their IDP treat the other teams as their _customers_. They ask teams what they need, and look for requests that come up consistently between teams. 
+What the IDP does is to put a layer on top of all the services that the teams are consuming. The Platform engineering team with their IDP treat the other teams as their _customers_. They ask teams what they need, and look for requests that come up consistently between teams.
 
-Now instead of each team repeating the same work of implementing a service and configuring it in the “correct” way, they can just grab it from the IDP instead.  Services are provided for teams to consume, pre-configured according to the standards of the organisation. 
+Now instead of each team repeating the same work of implementing a service and configuring it in the “correct” way, they can just grab it from the IDP instead. Services are provided for teams to consume, pre-configured according to the standards of the organisation.
 
 <figure markdown>
   ![Internal Developer Platform](platform-engineering-explained/IDP1.jpg)
@@ -138,8 +136,7 @@ Now instead of each team repeating the same work of implementing a service and c
 
 The IDP also takes on the burden of updating and maintaining the service that is being provided, all in a central location as opposed to being repeated on every team.
 
-
-Development teams can *contribute back to the IDP* as well, providing value that can benefit all other teams that are consuming the same service. 
+Development teams can _contribute back to the IDP_ as well, providing value that can benefit all other teams that are consuming the same service.
 
 Even with these contributions, the **Platform Engineering** team remain as the _owners_ of the IDP. They are ultimately responsible for running and maintaining the IDP in the organization, in the same way that each DevOps team continues to run their own applications.
 
@@ -152,6 +149,6 @@ As a takeaway, we can more clearly define the difference between regular DevOps 
 - **DevOps** teams: Have full control of the application lifecycle, from the early stages of development right through to running at scale in production
 - **Platform Engineering** teams: Create an **Internal Developer Platform** (IDP) which provides services that are easy to consume. They help facilitate the ongoing independence of DevOps teams.
 
-Platform Engineering is currently in its infancy, but the rapidly-evolving landscape of modern software engineering demands that it grows significantly and quickly. 
+Platform Engineering is currently in its infancy, but the rapidly-evolving landscape of modern software engineering demands that it grows significantly and quickly.
 
 To stay ahead of the game, organizations must take action now and invest in their IDP and Platform Engineering teams, or risk getting left behind. :simple-ghostery:
