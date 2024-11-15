@@ -1,17 +1,6 @@
----
-date: 2024-11-14
-authors: [james]
-description: >
-  Notes from Chapter 3 of Module 1 of the Business Method, where we use AI to brainstorm product ideas
-categories:
-  - The Business Method
----
+# Product Ideas
 
-# Chapter 3: Harnessing AI to Generate Winning Product Ideas
-
-Notes from Chapter 3 of Module 1 of the Business Method
-
-<!-- more -->
+Notes from brainstorming product ideas.
 
 ## **Stage 1: Initial Brainstorming Using a Problem-First Approach**
 
@@ -640,3 +629,5 @@ Notes from Chapter 3 of Module 1 of the Business Method
 
         - **Trend**: Cloud-based tools facilitate seamless collaboration among remote teams[2].
         - **Application**: Using cloud-based platforms can enable engineers to collaborate on content creation projects with peers or experts from around the world.
+
+

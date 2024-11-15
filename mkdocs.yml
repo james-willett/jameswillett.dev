@@ -12,12 +12,14 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.footer
+    - navigation.indexes
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
+
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -95,3 +97,12 @@ copyright: |
 
 nav:
   - index.md
+  - Business Method:
+    - businessMethod/index.md
+    - Product Ideas: businessMethod/product-ideas.md
+    - Competitors: businessMethod/competitors.md
+    - User Personas:
+      - businessMethod/buyerPersonas/index.md
+      - Demographics:
+        - Age Groups and Geographical Locations: businessMethod/buyerPersonas/demographics/age-groups.md
+    - Mission Statement: businessMethod/mission-statement.md
