@@ -51,7 +51,11 @@ plugins:
   - minify:
       minify_html: true
   - tags
-  - privacy
+  - privacy:
+      enabled: true
+      assets_exclude:
+        - cdn.jsdelivr.net/npm/mathjax@3/*
+        - giscus.app/*
 
 extra:
   analytics:
