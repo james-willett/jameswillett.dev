@@ -63,6 +63,10 @@ plugins:
       minify_html: true
   - tags
   - privacy:
+      links: 
+      links_attr_map:
+        target: _blank
+      links_noopener: true
       enabled: true
       assets_exclude:
         - cdn.jsdelivr.net/npm/mathjax@3/*
