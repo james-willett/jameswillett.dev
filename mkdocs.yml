@@ -53,11 +53,9 @@ plugins:
   - tags
   - privacy:
       enabled: true
-      concurrency: 1
-      log: true
-      assets: 
-      assets_include:
-        - unsplash.com/*
+      assets_exclude:
+        - cdn.jsdelivr.net/npm/mathjax@3/*
+        - giscus.app/*
 
 extra:
   analytics:
