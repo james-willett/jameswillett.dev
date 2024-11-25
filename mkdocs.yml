@@ -59,9 +59,6 @@ plugins:
       draggable: true
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - meta:
-      enabled: true
-      meta_file: ./meta.yml
   - minify:
       minify_html: true
   - tags
