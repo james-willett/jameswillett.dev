@@ -51,7 +51,13 @@ plugins:
   - minify:
       minify_html: true
   - tags
-  - privacy
+  - privacy:
+      enabled: true
+      concurrency: 1
+      log: true
+      assets: 
+      assets_include:
+        - unsplash.com/*
 
 extra:
   analytics:
