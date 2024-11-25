@@ -96,6 +96,9 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - hooks/socialmedia.py
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
