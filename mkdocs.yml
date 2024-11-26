@@ -2,6 +2,8 @@ site_name: jameswillett.dev
 site_description: Personal blog of James Willett
 site_url: https://jameswillett.dev
 site_author: James Willett
+repo_url: https://github.com/james-willett/jameswillett.dev
+repo_name: james-willett/jameswillett.dev
 
 theme:
   name: material
