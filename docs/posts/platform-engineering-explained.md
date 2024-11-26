@@ -6,6 +6,7 @@ description: >
   in the modern software development lifecycle?
 categories:
   - Platform Engineering
+  - YouTube Videos
 links:
   - YouTube video of this post: https://www.youtube.com/watch?v=-hvA-5N9LDc
 tags:
