@@ -73,7 +73,8 @@ plugins:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
-  - tags
+  - tags:
+      tags_file: tags.md
   - privacy:
       links: 
       links_attr_map:
@@ -139,3 +140,4 @@ copyright: |
 
 nav:
   - index.md
+  - Tags: tags.md

@@ -7,6 +7,9 @@ description: >
 categories:
   - YouTube Videos
   - Material for MkDocs
+tags:
+  - YouTube
+  - Material for MkDocs
 ---
 
 # Getting Started with Material for MkDocs
@@ -187,7 +190,7 @@ We can also add a toggle to our site that allows the user to switch between :whi
 theme:
   name: material
   palette:
-    # Dark Mode
+    # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
@@ -579,7 +582,7 @@ markdown_extensions:
 ````markdown title="diagram-examples.md"
 # Diagram Examples
 
-## Flowcharts
+## Flowcharts
 
 ```mermaid
 graph LR

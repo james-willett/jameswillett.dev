@@ -5,6 +5,8 @@ description: >
   What am I doing at the moment?
 categories:
   - Personal Productivity
+tags:
+  - personal
 ---
 
 # Now
@@ -13,11 +15,11 @@ My **"What I'm Doing Now"** declaration page - last updated on **Sunday April 9t
 
 [![Now - Banner Image]](./now.md)
 
-  [Now - Banner Image]: now/Now_Banner.png
+[Now - Banner Image]: now/Now_Banner.png
 
 <!-- more -->
 
-I’m in a town called Reading, just outside London in the UK. 
+I’m in a town called Reading, just outside London in the UK.
 
 I'm working full-time as a Principal Software Engineer at [SAP](https://sap.com). I'm also trying to lead a balanced yet exciting and stable habit-based life with my wife Sarah and our two children Seb & Chloe.
 
@@ -61,5 +63,3 @@ If my activities or priorities happen to change, I’ll update this page to refl
 This page is a public declaration and a reminder to myself, and it balances out the goal-driven nature of my Impossible List.
 
 It was inspired by [Thomas Frank](https://thomasjfrank.com/) and [Derek Shivers](https://nownownow.com/about)
-
-
