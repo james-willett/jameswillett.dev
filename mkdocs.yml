@@ -51,6 +51,16 @@ plugins:
       blog_dir: .
       blog_toc: true
       post_url_format: "{slug}"
+  - git-committers:
+      enabled: true
+      repository: james-willett/jameswillett.dev
+      branch: main
+      token: !ENV GH_TOKEN
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
   - glightbox:
       touchNavigation: false
       loop: false
