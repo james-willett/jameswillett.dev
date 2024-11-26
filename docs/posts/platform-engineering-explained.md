@@ -8,6 +8,8 @@ categories:
   - Platform Engineering
 links:
   - YouTube video of this post: https://www.youtube.com/watch?v=-hvA-5N9LDc
+tags:
+  - YouTube
 ---
 
 # Platform Engineering Explained
