@@ -7,6 +7,9 @@ description: >
 categories:
   - YouTube Videos
   - Material for MkDocs
+tags:
+  - YouTube
+  - Material for MkDocs
 ---
 
 # Getting Started with Material for MkDocs
@@ -32,13 +35,13 @@ Along the way, you'll learn just a handful of the awesome features that Material
 - How to empathize parts of your content using **admonitions** - also known as _callouts_
 - And how to bring your ideas to life with **statically rendered diagrams** directly in your docs
 
-???+ tip 
-    This is an in-depth tutorial. If this is your first time using Material for MkDocs then you're probably best to just follow it all through from the beginning.
+???+ tip
+This is an in-depth tutorial. If this is your first time using Material for MkDocs then you're probably best to just follow it all through from the beginning.
 
     But if you've used Material for MkDocs before and just want to know about a certain feature, you can use the __Table of contents__ on the right to jump around this guide at your leisure.
 
 !!! info "Supporting GitHub Repository"
-    I've created a supporting [GitHub repository](https://github.com/james-willett/material-mkdocs-youtube-2024){:target="\_blank"} for all the code examples featured in this tutorial
+I've created a supporting [GitHub repository](https://github.com/james-willett/material-mkdocs-youtube-2024){:target="\_blank"} for all the code examples featured in this tutorial
 
 ---
 
@@ -48,17 +51,17 @@ Before we begin the tutorial, let's quickly go over the differences between [MkD
 
 Plain [**MkDocs**](https://www.mkdocs.org/) is a static site generator specifically designed for creating documentation websites. So by using MkDocs alone, you get a relatively vanilla and straightforward site for your documentation.
 
-On the other hand, [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/) is a theme built on top of MkDocs. It transforms your documentation site with a modern, responsive design inspired by Material Design principles. 
+On the other hand, [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/) is a theme built on top of MkDocs. It transforms your documentation site with a modern, responsive design inspired by Material Design principles.
 
 What's important to note is that this theme doesn't just change the look; it enhances functionality with built-in plugins that support features like:
 
-- [Blog posts](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/) 
+- [Blog posts](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/)
 - [Social cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
-- [Advanced search capabilities](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/) 
+- [Advanced search capabilities](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/)
 - and lots more...
 
 !!! info
-    So to summarise, **MkDocs** provides the core functionality of building a static site, while **Material for MkDocs** signficantly elevates the visual and interactive experience of your documentation.
+So to summarise, **MkDocs** provides the core functionality of building a static site, while **Material for MkDocs** signficantly elevates the visual and interactive experience of your documentation.
 
 Now that we understand the differences, let's get to work on setting up our new **Material for MkDocs** portal.
 
@@ -69,10 +72,9 @@ Now that we understand the differences, let's get to work on setting up our new 
 These are the _prerequistes_ you’ll need to have installed if you want to follow along with this tutorial:
 
 - [:simple-python: Python](https://www.python.org/downloads/)
-    - [pip](https://pip.pypa.io/en/stable/installation/) - the Python package manager (included by default in Python 3.4 and later)
+  - [pip](https://pip.pypa.io/en/stable/installation/) - the Python package manager (included by default in Python 3.4 and later)
 - [:material-microsoft-visual-studio-code: Visual Studio Code](https://code.visualstudio.com/) - or any other IDE of your choice
 - [:simple-github: GitHub Account](http://github.com) - as we will deploy the site on [GitHub pages](https://pages.github.com/)
-
 
 ---
 
@@ -80,12 +82,12 @@ These are the _prerequistes_ you’ll need to have installed if you want to foll
 
 - Open a terminal in the folder that you want to create the project in
 - Type `which python` or `which python3` to check Python is installed
-??? note "To check Python location on :material-microsoft-windows: Windows"
-    Type `where python` instead on the command prompt or Powershell terminal
+  ??? note "To check Python location on :material-microsoft-windows: Windows"
+  Type `where python` instead on the command prompt or Powershell terminal
 - Setup a [Python virtual environment](https://realpython.com/what-is-pip/#using-pip-in-a-python-virtual-environment) by typing `python -m venv venv`
 - Type `source venv/bin/activate` to activate the virtual environment
-??? note "To activate Python virtual environment on :material-microsoft-windows: Windows"
-    Type `.\venv\Scripts\activate` instead
+  ??? note "To activate Python virtual environment on :material-microsoft-windows: Windows"
+  Type `.\venv\Scripts\activate` instead
 - Check pip version `pip --version`
 - Install mkdocs material - `pip install mkdocs-material`
 - Open Visual studio code in this folder with `code .`
@@ -111,10 +113,11 @@ theme:
 To activate most of the useful features in MkDocs Material, we need to make changes to the `mkdocs.yml` file. Making these changes is much easier with the help of [YAML schema validation](https://squidfunk.github.io/mkdocs-material/schema.json).
 
 - Within the **Extensions** tab of Visual Studio Code, install the [Red Hat VS Code Yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
-- In VsCode open `settings.json`. 
+- In VsCode open `settings.json`.
 
 ???+ tip "How to open `settings.json` in :material-microsoft-visual-studio-code: Visual Studio Code"
-    You can open `settings.json` by clicking the :gear: **gear** icon in the bottom left, then clicking the :page_facing_up: **document** icon in the top right.
+You can open `settings.json` by clicking the :gear: **gear** icon in the bottom left, then clicking the :page_facing_up: **document** icon in the top right.
+
 - Add the following at the bottom of the `settings.json` file:
 
 ```json title="settings.json"
@@ -342,67 +345,9 @@ If you want to add code in another language, find the lexers (short names for th
 - [:fontawesome-brands-java: Java](https://pygments.org/docs/lexers/#pygments-lexers-for-jvm-languages)
 - [:fontawesome-brands-golang: GoLang](https://pygments.org/docs/lexers/#lexers-for-the-google-go-language)
 
-### Add Title
-
-- Add a title to the codeblock by typing `py title="add_numbers.py"`:
-
-````markdown title="Code block with title"
-```py title="add_numbers.py" 
-# Function to add two numbers
-def add_two_numbers(num1, num2):
-    return num1 + num2
-
-# Example usage
-result = add_two_numbers(5, 3)
-print('The sum is:', result)
-```
-````
-
-<div class="result" markdown>
-```py title="code_examples.md" 
-# Function to add two numbers
-def add_two_numbers(num1, num2):
-    return num1 + num2
-
-# Example usage
-result = add_two_numbers(5, 3)
-print('The sum is:', result)
-```
-</div>
-
-### Add Line Numbers
-
-Add line numbers by typing `py linenums="1"`:
-
-````markdown title="Code block with line numbers"
-```py title="add_numbers.py" linenums="1"
-# Function to add two numbers
-def add_two_numbers(num1, num2):
-    return num1 + num2
-
-# Example usage
-result = add_two_numbers(5, 3)
-print('The sum is:', result)
-```
-````
-
-<div class="result" markdown>
-```py title="code_examples.md" linenums="1"
-# Function to add two numbers
-def add_two_numbers(num1, num2):
-    return num1 + num2
-
-# Example usage
-result = add_two_numbers(5, 3)
-print('The sum is:', result)
-```
-</div>
-
-You can also start the line numbers from a different number e.g. `py linenums="5"`
-
 ### Highlight Lines
 
-To highlight lines type `py hl_lines="2-4"`. 
+To highlight lines type `py hl_lines="2-4"`.
 
 Here is another codeblock to show this:
 
@@ -420,7 +365,7 @@ console.log("The concatenated string is:", result);
 ````
 
 <div class="result" markdown>
-```js title="code-examples.md" linenums="1" hl_lines="2-4"
+``` js title="code-examples.md" linenums="1" hl_lines="2-4"
 // Function to concatenate two strings
 function concatenateStrings(str1, str2) {
   return str1 + str2;
@@ -429,6 +374,7 @@ function concatenateStrings(str1, str2) {
 // Example usage
 const result = concatenateStrings("Hello, ", "World!");
 console.log("The concatenated string is:", result);
+
 ```
 </div>
 
@@ -449,6 +395,7 @@ markdown_extensions:
 - Add the following to show `generic` content tabs:
 
 ```markdown title="content-tabs.md"
+
 ## Content Tabs
 
 This is some examples of content tabs.
@@ -523,6 +470,7 @@ markdown_extensions:
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 ```
+
 !!! note "Title of the callout"
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -542,6 +490,7 @@ Collapsible callout:
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 ```
+
 ??? info "Collapsible callout"
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -600,7 +549,6 @@ graph LR
   B ---->|No| E[Success!];
 ```
 
-
 - This is a **sequence diagram** example:
 
 ````markdown title="diagram-examples.md"
@@ -619,6 +567,7 @@ sequenceDiagram
   Database-->>Terminal: Customer data
 ```
 ````
+
 ```mermaid
 sequenceDiagram
   autonumber
@@ -704,6 +653,6 @@ jobs:
 - Create a brand new GitHub repository
 - Hook up that GitHub repository remote with the project code (i.e. do `git init` then follow instructions to add the remote)
 - Push branch to `main` on the GitHub repository
-- Go to GitHub and into settings and change __pages__ to `deploy from branch`, choose the `gh-pages` branch.
+- Go to GitHub and into settings and change **pages** to `deploy from branch`, choose the `gh-pages` branch.
 - A GitHub Action will trigger that deploys the site
-    - For example [https://james-willett.github.io/mkdocs-material-tutorial-2024/](https://james-willett.github.io/mkdocs-material-tutorial-2024/)
+  - For example [https://james-willett.github.io/mkdocs-material-tutorial-2024/](https://james-willett.github.io/mkdocs-material-tutorial-2024/)
